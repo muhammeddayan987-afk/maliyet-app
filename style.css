@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 14px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 120px;
+    transition: border-color 0.3s;
+    touch-action: manipulation;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    padding: 14px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.1s;
+    touch-action: manipulation;
+    min-height: 48px;
+}
+
+button:active {
+    background: #5568d3;
+    transform: scale(0.98);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow-x: auto;
+    display: block;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+tbody, thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+th {
+    background: #667eea;
+    color: white;
+    font-weight: bold;
+}
+
+tr:active {
+    background: #f5f5f5;
+}
+
+.btn-sil {
+    background: #e74c3c;
+    padding: 10px 12px;
+    font-size: 14px;
+    min-height: 40px;
+}
+
+.btn-sil:active {
+    background: #c0392b;
+}
+
+.urun-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.urun-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.urun-header h3 {
+    color: #333;
+    font-size: 1.3em;
+    word-break: break-word;
+}
+
+.malzeme-secim {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.malzeme-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.malzeme-item span {
+    font-size: 14px;
+    word-break: break-word;
+    flex: 1;
+}
+
+.toplam {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #27ae60;
+    text-align: right;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+    
+    .container {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    
+    .section {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    .urun-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .urun-header h3 {
+        font-size: 1.2em;
+    }
+    
+    .malzeme-secim {
+        flex-direction: column;
+    }
+    
+    .malzeme-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .malzeme-item button {
+        width: 100%;
+    }
+    
+    th, td {
+        padding: 8px 4px;
+        font-size: 12px;
+    }
+    
+    .toplam {
+        font-size: 1.1em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3em;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 6px 3px;
+        font-size: 11px;
+    }
+}
