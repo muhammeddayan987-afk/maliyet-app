@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="Ürün ve malzeme maliyet hesaplama uygulaması">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Maliyet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <title>Ürün Maliyet Hesaplama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ürün Maliyet Hesaplama</h1>
+        
+        <div class="section">
+            <h2>Malzemeler</h2>
+            <div class="input-group">
+                <input type="text" id="malzemeAdi" placeholder="Malzeme Adı">
+                <input type="number" id="malzemeFiyat" placeholder="Birim Fiyat (₺)" step="0.01">
+                <input type="text" id="malzemeBirim" placeholder="Birim (kg, adet, lt)">
+                <button onclick="malzemeEkle()">Ekle</button>
+            </div>
+            <table id="malzemeTablosu">
+                <thead>
+                    <tr>
+                        <th>Malzeme Adı</th>
+                        <th>Birim Fiyat</th>
+                        <th>Birim</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody id="malzemeListesi">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Ürünler</h2>
+            <div class="input-group">
+                <input type="text" id="urunAdi" placeholder="Ürün Adı">
+                <button onclick="urunEkle()">Ürün Ekle</button>
+            </div>
+            <div id="urunListesi"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker kayıtlı'))
+                    .catch(err => console.log('Service Worker hatası:', err));
+            });
+        }
+    </script>
+</body>
+</html>
