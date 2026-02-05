@@ -444,4 +444,6 @@ function urunListesiniGuncelle() {
 veriYukle();
 malzemeListesiniGuncelle();
 urunListesiniGuncelle();
+
 >>>>>>> 5551c3ac253bd8e89164bf43265ff94f849b1d5c
+
